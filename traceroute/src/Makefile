@@ -25,7 +25,7 @@ CFLAGS	= ${O_FLAG} -Wall ${INCLUDE} # -g
 # To make object file
 #
 %.o: %.c
-	${CC} ${CFlAGS} -c $< -o $@
+	${CC} ${CFlAGS} ${INCLUDE} -c $< -o $@
 	${COPY} *.o ${OBJ_DIR}
 
 #
@@ -33,7 +33,8 @@ CFLAGS	= ${O_FLAG} -Wall ${INCLUDE} # -g
 #
 TRPROGS	= traceroute-ts
 
-OBJ	= main.o
+OBJ	= main.o \
+	  utils.o
 
 TARGETS	= ${TRPROGS}
 
