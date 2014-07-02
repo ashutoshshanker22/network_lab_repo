@@ -1,7 +1,4 @@
-#ifndef _TRACEROUTE_H
-#define _TRACEROUTE_H
 #include <traceroute.h>
-#endif
 
 extern int optind;
 extern int opterr;
