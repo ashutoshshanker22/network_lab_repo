@@ -46,8 +46,7 @@ int main(int argc, char *argv) {
 
     arg = (struct argument *)malloc(sizeof(struct argument));
     if (arg == NULL) {
-        fprintf(stderr, "%s:%d : main() Malloc error\n", __FILE__, __LINE__);
-        exit(EXIT_FAILURE);
+        log_error("%s:%d : main() Malloc error\n", __FILE__, __LINE__);
     }
     
     opterr = 0;

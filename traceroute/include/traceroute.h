@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <stdarg.h>
 
 
 struct argument {
@@ -15,3 +16,4 @@ struct argument {
 
 void usage(void);
 void print_arg(struct argument *arg);
+void log_error(const char *format, ...);
